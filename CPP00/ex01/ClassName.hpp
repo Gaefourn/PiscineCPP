@@ -6,13 +6,14 @@
 /*   By: gaetan <gaetan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 17:03:34 by gaetan            #+#    #+#             */
-/*   Updated: 2020/10/15 13:25:54 by gaetan           ###   ########.fr       */
+/*   Updated: 2020/10/19 15:00:57 by gaetan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <cstring>
 #include <iostream>
+#include <fstream>
 
 class		contact
 {
