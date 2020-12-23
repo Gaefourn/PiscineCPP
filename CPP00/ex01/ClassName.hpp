@@ -6,9 +6,12 @@
 /*   By: gaetan <gaetan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 17:03:34 by gaetan            #+#    #+#             */
-/*   Updated: 2020/10/19 15:00:57 by gaetan           ###   ########.fr       */
+/*   Updated: 2020/10/19 15:53:57 by gaetan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CLASSNAME_HPP
+#define CLASSNAME_HPP
 
 #include <string>
 #include <cstring>
@@ -55,3 +58,5 @@ class		contact
 	std::string		m_first_name, m_last_name, m_nickname, m_login, m_postal_address, m_email_address, m_phone_number,
 	m_birthday_date, m_favorite_meal, m_underwear_color, m_darkest_secret;
 };
+
+#endif
