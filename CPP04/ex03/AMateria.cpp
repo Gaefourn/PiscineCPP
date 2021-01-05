@@ -19,6 +19,7 @@ AMateria &AMateria::operator=(const AMateria &copy)
 {
 	_xp = copy.getXP();
 	_type = copy.getType();
+	return *this;
 }
 
 std::string const & AMateria::getType() const

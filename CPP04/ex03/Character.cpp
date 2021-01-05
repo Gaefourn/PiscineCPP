@@ -66,3 +66,12 @@ void Character::use(int idx, ICharacter &target)
 		return ;
 	_bag[idx]->use(target);
 }
+
+Character::~Character()
+{
+	for (int i = 0; i < _index; i++)
+	{
+		delete _bag[i];
+		_bag[i] =0;
+	}
+}

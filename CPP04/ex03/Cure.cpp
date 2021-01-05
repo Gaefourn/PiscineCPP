@@ -1,9 +1,9 @@
 #include "Cure.hpp"
 
-Cure::Cure(std::string const &type) : AMateria("Cure")
+Cure::Cure() : AMateria("Cure")
 {}
 
-Cure::Cure(const Cure &copy) : AMateria("Cure");
+Cure::Cure(const Cure &copy) : AMateria("Cure")
 {
 	_xp = copy._xp;
 }

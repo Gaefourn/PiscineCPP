@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <string>
+class AMateria;
 #include "Character.hpp"
+#include "ICharacter.hpp"
 
 class AMateria
 {
@@ -15,13 +17,13 @@ public:
 	AMateria(const AMateria &copy);
 	AMateria &operator=(const AMateria &copy);
 	
-	std::string const &getType() const;
+	std::string const &getType(void) const;
 	unsigned int getXP() const;
 	
-	virtual AMateria *clone() const = 0;
+	virtual AMateria *clone(void) const = 0;
 	virtual void use (ICharacter &target);
 
-	~AMateria();
+	virtual ~AMateria(void);
 };
 
 #endif
