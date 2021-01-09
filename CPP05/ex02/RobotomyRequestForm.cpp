@@ -23,7 +23,7 @@ std::string RobotomyRequestForm::getTarget() const
 RobotomyRequestForm::~RobotomyRequestForm()
 {}
 
-void RobotomyRequestForm::robotomize(Bureaucrat &buro)
+void RobotomyRequestForm::execute(const Bureaucrat &buro) const
 {
 	Form::execute(buro);
 	std::cout << "*Driller noises brrrrrrrrrrrrrrrrrrrrrrr*" << std::endl;

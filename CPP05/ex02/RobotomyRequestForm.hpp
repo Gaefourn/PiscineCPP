@@ -13,7 +13,7 @@ public:
 	RobotomyRequestForm &operator=(const RobotomyRequestForm &copy);
 	
 	std::string getTarget() const;
-	void robotomize(Bureaucrat &buro);
+	void execute(const Bureaucrat &buro) const;
 	
 	virtual ~RobotomyRequestForm();
 };

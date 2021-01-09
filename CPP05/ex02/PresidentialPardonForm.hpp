@@ -13,7 +13,7 @@ public:
 	PresidentialPardonForm &operator=(const PresidentialPardonForm &copy);
 	
 	std::string getTarget() const;
-	void pardon(const Bureaucrat &buro) const;
+	void execute(const Bureaucrat &buro) const;
 	
 	virtual ~PresidentialPardonForm();
 };

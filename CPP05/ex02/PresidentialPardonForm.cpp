@@ -24,7 +24,7 @@ std::string PresidentialPardonForm::getTarget() const
 PresidentialPardonForm::~PresidentialPardonForm()
 {}
 
-void PresidentialPardonForm::pardon(const Bureaucrat &buro) const
+void PresidentialPardonForm::execute(const Bureaucrat &buro) const
 {
 	Form::execute(buro);
 	std::cout << getTarget() << " was forgiven by Zafod Beeblebrox" << std::endl;
