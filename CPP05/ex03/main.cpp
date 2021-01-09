@@ -15,15 +15,15 @@ int main(void)
 	Form* form4;
 	
 	form1 = someRandomIntern.makeForm("robotomy request", "Orga");
-	std::cout << form1 << std::endl;
+	std::cout << *form1 << std::endl;
 	
 	form2 = someRandomIntern.makeForm("presidential pardon", "Sweet");
-	std::cout << form2 <<std::endl;
+	std::cout << *form2 <<std::endl;
 	
 	form3 = someRandomIntern.makeForm("shrubbery creation", "arbr");
-	std::cout << form3 << std::endl;
+	std::cout << *form3 << std::endl;
 	
 	form4 = someRandomIntern.makeForm("fail", "fail");
-	std::cout << form4 << std::endl;
+	form4 = form4;
 	return 0;
 }
