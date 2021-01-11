@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gaetan <gaetan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gaefourn <gaefourn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 14:19:37 by gaetan            #+#    #+#             */
-/*   Updated: 2020/10/12 15:59:25 by gaetan           ###   ########.fr       */
+/*   Updated: 2021/01/11 10:51:55 by gaefourn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstring>
 
-int main(int ac, char *av[])
+int main(int ac, char **av)
 {
 	if (ac <= 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
