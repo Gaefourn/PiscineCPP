@@ -46,7 +46,6 @@ int	main()
 	{
 		int a = 4;
 		int b = 6;
-		int c = b;
 		
 		std::cout << "Max of " << a << " and " << b << " is ";
 		std::cout << max<int>(a, b) << std::endl;

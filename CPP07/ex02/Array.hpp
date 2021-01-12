@@ -8,8 +8,8 @@ template <typename T>
 class Array
 {
 private:
-	T *_array;
 	unsigned int _size;
+	T *_array;
 public:
 	Array() : _size(0), _array(new T[0]) {};
 	Array(unsigned int n) : _size(n), _array(new T[n]()) {};
