@@ -37,9 +37,9 @@ Data * deserialize(void * raw)
 	return data;
 }
 
-int main(int ac, char **av)
+int main()
 {
-	std::srand(std::time(NULL) + std::clock());
+	std::srand(time(0));
 	void *serial = serialize();
 	Data *data = new Data();
 	
