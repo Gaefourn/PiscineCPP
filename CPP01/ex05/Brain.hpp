@@ -6,11 +6,6 @@
 
 class Brain
 {
-private:	
-
-int _iq = 142;
-int _age = 42;
-
 public:
 
 Brain* identify(void);

@@ -42,7 +42,7 @@ int main (int ac, char **av)
 {
 	if (ac != 4 )
 	{
-		std::cout << "Invalid number of arguments." << std::endl;
+		std::cout << "Wrong number of arguments." << std::endl;
 		return -1;
 	} 
 	if (!strlen(av[2]) || !strlen(av[3]))
@@ -50,5 +50,7 @@ int main (int ac, char **av)
 		std::cout << "Error, there is one empty string." << std::endl;
 		return -1;
 	}
-	return (replace(av[1], av[1] + std::string(".replace"), av[2], av[3]));	
+	replace(av[1], av[1] + std::string(".replace"), av[2], av[3]);	
+
+	return 0;
 }

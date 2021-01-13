@@ -1,10 +1,10 @@
 #include "Pony.hpp"
 
-Pony::Pony(std::string name, int weight, float size)
+Pony::Pony(std::string name, int weight, float size) : m_name(name), m_weight(weight), m_size(size)
 {
 	std::cout << "Pony name: " <<
-	name << " , pony weight: " <<
-	weight << " , pony size: " << size << std::endl;
+	m_name << " , pony weight: " <<
+	m_weight << " , pony size: " << m_size << std::endl;
 }
 
 Pony::~Pony(void)
