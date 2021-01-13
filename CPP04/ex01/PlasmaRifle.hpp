@@ -1,5 +1,5 @@
 #ifndef PLASMARIFLE_HPP
-#define PLSAMARIFLE_HPP
+#define PLASMARIFLE_HPP
 
 #include "AWeapon.hpp"
 

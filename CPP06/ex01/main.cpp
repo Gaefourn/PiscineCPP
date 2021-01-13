@@ -5,23 +5,21 @@
 void *serialize(void)
 {
 	const char rand[] = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	std::string addr;
-	std::stringstream ret;
+	char *addr = new char[16 + sizeof(int)];
 	char c;
 	for (int i = 0; i < 8; i++)
 	{
 		c = rand[std::rand() % 62];
-		ret << c;
+		addr[i] = c;
 	}
 	int n = std::rand() % 2147483647;
-	ret << n;
+	*reinterpret_cast <int *>(addr + 8) = n;
 	for (int i = 0; i < 8; i++)
 	{
 		c = rand[std::rand() % 62];
-		ret << c;
+		addr[i] = c;
 	}
-	addr += ret.str();
-	return reinterpret_cast<void*>(const_cast<char*>(addr.c_str()));
+	return (void*)addr;
 }
 
 

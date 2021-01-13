@@ -6,7 +6,7 @@ SRCS     := main.cpp
 OBJS     := $(SRCS:.cpp=.o)
 
 # Define all the compiling flags.
-CC      := g++
+CC      := clang++
 CFLAGS := -Wall -Werror -Wextra
 
 ################################################################

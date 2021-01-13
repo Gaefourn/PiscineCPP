@@ -24,6 +24,6 @@ int main(void)
 	std::cout << *form3 << std::endl;
 	
 	form4 = someRandomIntern.makeForm("fail", "fail");
-	form4 = form4;
+
 	return 0;
 }
