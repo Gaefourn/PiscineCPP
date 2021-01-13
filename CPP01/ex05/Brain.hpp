@@ -7,8 +7,9 @@
 class Brain
 {
 public:
-
+Brain();
 Brain* identify(void);
+~Brain();
 
 };
 

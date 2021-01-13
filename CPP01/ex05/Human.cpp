@@ -1,5 +1,11 @@
 #include "Human.hpp"
 
+Human::Human()
+{}
+
+Human::~Human()
+{}
+
 Brain &Human::getBrain(void)
 {
 	return(_brain);

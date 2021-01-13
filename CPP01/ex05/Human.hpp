@@ -11,8 +11,10 @@ Brain _brain;
 
 public:
 
+Human();
 Brain *identify(void);
 Brain &getBrain(void);
+~Human();
 
 
 };
