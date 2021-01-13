@@ -14,6 +14,7 @@ public:
 	void meleeAttack(std::string const &target);
 	
 	~SuperTrap();
+
 };
 
 #endif

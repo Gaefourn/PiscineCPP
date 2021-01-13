@@ -2,7 +2,14 @@
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "FR4G-TP " << _Name << " a ete creer" << std::endl;
+	_Energy_points = 100;
+	_Max_energy_points = 100;
+	_Melee_attack_damage = 30;
+	_Ranged_attack_damage = 20;
+	_Armor_damage_reduction = 5;
+	_Level = 1;
+	std::cout << "FR4G-TP " << _Name << " a ete creer, il possede "
+	<< _Max_energy_points << " HP et est level " << _Level << std::endl;
 }
 
 void FragTrap::rangedAttack(std::string const &target)
@@ -34,8 +41,8 @@ void FragTrap::takeDamage(unsigned int amount)
 void FragTrap::beRepaired(unsigned int amount)
 {
 	_Hit_points += amount;
-	if (_Hit_points > 100 )
-		_Hit_points = 100;
+	if (_Hit_points > _Max_hit_points )
+		_Hit_points = _Max_hit_points;
 	std::cout << "FR4G-TP " << _Name << " se repare, gagnant " << amount << " HP, ses HP sont desormais de "
 	<< _Hit_points << std::endl;
 }
@@ -45,7 +52,7 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target)
 	if (_Energy_points < 25)
 	{
 		std::cout << "FR4G-TP " << _Name << " a seulement " << _Energy_points <<
-		" et ne peut donc pas utiliser sa competence vaulthunter_dot_exe." << std::endl;
+		" point d'energie et ne peut donc pas utiliser sa competence vaulthunter_dot_exe." << std::endl;
 		return ;
 	}
 	else

@@ -1,15 +1,18 @@
 #include "ScavTrap.hpp"
 
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name) 
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	_Energy_points = 50; 
+	_Energy_points = 50;
 	_Max_energy_points = 50;
-	 _Melee_attack_damage = 20;
-	_Ranged_attack_damage = 15; 
+	_Melee_attack_damage = 20;
+	_Ranged_attack_damage = 15;
 	_Armor_damage_reduction = 3;
-
-	std::cout << "SC4V-TP " << _Name << " vient de rejoindre la partie." << std::endl;
+	_Level = 1;
+	
+	std::cout << "SC4V-TP " << _Name << " vient de rejoindre la partie." <<
+	" Il est level " << _Level << " et possede " << _Max_energy_points << " points d'energie et " <<
+	_Max_hit_points << " HPs." << std::endl;
 }
 
 ScavTrap::~ScavTrap()
@@ -57,6 +60,17 @@ void ScavTrap::challengeNewcomer(void)
 {
 	int choice;
 	std::string challenge;
+
+	if (_Energy_points < 25)
+	{
+		std::cout << "SC4V-TP " << _Name << " a seulement " << _Energy_points <<
+		"  point d'energie et ne peut donc pas utiliser sa competence vaulthunter_dot_exe." << std::endl;
+		return ;
+	}
+	else
+		_Energy_points -= 25;
+	if ( _Energy_points < 0 )
+	 _Energy_points = 0;
 	
 	choice = rand() % 5;
 	switch(choice){
