@@ -2,15 +2,6 @@
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	_Name = name;
-	_Hit_points = 100;
-	_Max_hit_points = 100;
-	_Energy_points = 100;
-	_Max_energy_points = 100;
-	_Level = 1;
-	_Melee_attack_damage = 30;
-	_Ranged_attack_damage = 20;
-	_Armor_damage_reduction = 5;
 	std::cout << "FR4G-TP " << _Name << " a ete creer, il possede "
 	<< _Max_energy_points << " HP et est level " << _Level << std::endl;
 }

@@ -2,13 +2,6 @@
 
 NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name)
 {
-	_Hit_points = 60;
-	_Max_hit_points = 60;
-	_Energy_points = 120;
-	_Max_energy_points = 120;
-	_Melee_attack_damage = 60;
-	_Ranged_attack_damage = 5;
-	_Armor_damage_reduction = 0;
 	std::cout << _Name << " NINJA !" << std::endl;
 }
 
