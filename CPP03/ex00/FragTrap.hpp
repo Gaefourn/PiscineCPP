@@ -12,6 +12,8 @@ private:
 		_Level, _Melee_attack_damage, _Ranged_attack_damage, _Armor_damage_reduction;
 public:
 	FragTrap(std::string name);
+	FragTrap(const FragTrap &copy);
+	FragTrap &operator=(const FragTrap &copy);
 	
 	void rangedAttack(std::string const &target);
 	void meleeAttack(std::string const &traget);

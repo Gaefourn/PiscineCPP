@@ -12,6 +12,8 @@ private:
 	_Melee_attack_damage, _Ranged_attack_damage, _Armor_damage_reduction;
 public:
 	ScavTrap(std::string name);
+	ScavTrap(const ScavTrap &copy);
+	ScavTrap &operator=(const ScavTrap &copy);
 	
 
 	void beRepaired(unsigned int amount);

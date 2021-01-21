@@ -39,5 +39,13 @@ int main()
 	NINJA.ninjaShoebox(Orga);
 	NINJA.ninjaShoebox(NINJA);
 	
+	NinjaTrap copy = NINJA;
+	NinjaTrap copy2(copy);
+	
+	std::cout << "Operator = name : " << copy.getName() << std::endl;
+	std::cout << "Copy constructor name: " << copy2.getName() << std::endl;
+	copy.meleeAttack("Naruto");
+	copy2.rangedAttack("Naruto");
+	
 	return (0);
 }

@@ -12,6 +12,8 @@ protected:
 		_Level, _Melee_attack_damage, _Ranged_attack_damage, _Armor_damage_reduction;
 public:
 	ClapTrap(std::string name);
+	ClapTrap(const ClapTrap &copy);
+	ClapTrap &operator=(const ClapTrap &copy);
 	
 	virtual void rangedAttack(std::string const &target);
 	virtual void meleeAttack(std::string const &traget);

@@ -10,6 +10,26 @@ _Ranged_attack_damage(15), _Armor_damage_reduction(3)
 	_Max_hit_points << " HPs." << std::endl;
 }
 
+ScavTrap::ScavTrap(const ScavTrap &copy)
+{
+	*this = copy;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &copy)
+{
+	_Name = copy._Name;
+	_Hit_points = copy._Hit_points;
+	_Max_hit_points = copy._Max_hit_points;
+	_Energy_points = copy._Energy_points;
+	_Max_energy_points = copy._Max_energy_points;
+	_Level = copy._Level;
+	_Melee_attack_damage = copy._Melee_attack_damage;
+	_Ranged_attack_damage = copy._Ranged_attack_damage;
+	_Armor_damage_reduction = copy._Armor_damage_reduction;
+	
+	return *this;
+}
+
 ScavTrap::~ScavTrap()
 {
 	std::cout << "SC4V-TP " << _Name << " vient de quitter la partie." << std::endl;

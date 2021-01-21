@@ -3,16 +3,34 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+	_Name = name;
+	_Hit_points = 100;
+	_Max_hit_points = 100;
 	_Energy_points = 50;
 	_Max_energy_points = 50;
+	_Level = 1;
 	_Melee_attack_damage = 20;
 	_Ranged_attack_damage = 15;
 	_Armor_damage_reduction = 3;
-	_Level = 1;
-	
 	std::cout << "SC4V-TP " << _Name << " vient de rejoindre la partie." <<
 	" Il est level " << _Level << " et possede " << _Max_energy_points << " points d'energie et " <<
 	_Max_hit_points << " HPs." << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
+{
+	std::cout << "SC4V-TP " << _Name << " vient de rejoindre la partie." <<
+	" Il est level " << _Level << " et possede " << _Max_energy_points << " points d'energie et " <<
+	_Max_hit_points << " HPs." << std::endl;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &copy)
+{
+	(void)copy;
+	std::cout << "SC4V-TP " << _Name << " vient de rejoindre la partie." <<
+	" Il est level " << _Level << " et possede " << _Max_energy_points << " points d'energie et " <<
+	_Max_hit_points << " HPs." << std::endl;
+	return *this;
 }
 
 ScavTrap::~ScavTrap()

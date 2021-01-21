@@ -8,6 +8,26 @@ _Ranged_attack_damage(20), _Armor_damage_reduction(5)
 	<< _Max_energy_points << " HP et est level " << _Level << std::endl;
 }
 
+FragTrap::FragTrap(const FragTrap &copy)
+{
+	*this = copy;
+}
+
+FragTrap &FragTrap::operator=(const FragTrap &copy)
+{
+	_name = copy._name;
+	_Hit_points = copy._Hit_points;
+	_Max_hit_points = copy._Max_hit_points;
+	_Energy_points = copy._Energy_points;
+	_Max_energy_points = copy._Max_energy_points;
+	_Level = copy._Level;
+	_Melee_attack_damage = copy._Melee_attack_damage;
+	_Ranged_attack_damage = copy._Ranged_attack_damage;
+	_Armor_damage_reduction = copy._Armor_damage_reduction;
+	
+	return *this;
+}
+
 void FragTrap::rangedAttack(std::string const &target)
 {
 	std::cout << "FR4G-TP " << _name << " attaque " << target << " a distance, causant "

@@ -9,6 +9,8 @@ class FragTrap : virtual public ClapTrap
 {
 public:
 	FragTrap(std::string name);
+	FragTrap(const FragTrap &copy);
+	FragTrap &operator=(const FragTrap &copy);
 	
 	void rangedAttack(std::string const &target);
 	void meleeAttack(std::string const &traget);

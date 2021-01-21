@@ -1,12 +1,38 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : _Name(name), _Hit_points(100), _Max_hit_points(100),
-_Energy_points(100), _Max_energy_points(100), _Level(1), _Melee_attack_damage(30),
-_Ranged_attack_damage(20), _Armor_damage_reduction(5)
+ClapTrap::ClapTrap(std::string name)
 {
+	_Name = name;
+	_Hit_points = 100;
+	_Max_hit_points = 100;
+	_Energy_points = 100;
+	_Max_energy_points = 100;
+	_Level = 1;
+	_Melee_attack_damage = 30;
+	_Ranged_attack_damage = 20;
+	_Armor_damage_reduction = 5;
 	std::cout << "ClapTrap " << _Name << " est apparu !" << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+	*this = copy;
+}
+
+ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
+{
+	_Name = copy._Name;
+	_Hit_points = copy._Hit_points;
+	_Max_hit_points = copy._Max_hit_points;
+	_Energy_points = copy._Energy_points;
+	_Max_energy_points = copy._Max_energy_points;
+	_Level = copy._Level;
+	_Melee_attack_damage = copy._Melee_attack_damage;
+	_Ranged_attack_damage = copy._Ranged_attack_damage;
+	_Armor_damage_reduction = copy._Armor_damage_reduction;
+	
+	return *this;
+}
 
 ClapTrap::~ClapTrap()
 {
@@ -46,4 +72,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 		_Hit_points = _Max_hit_points;
 	std::cout << "CL4P-TP " << _Name << " se repare, gagnant " << amount << " HP, ses HP sont desormais de "
 	<< _Hit_points << std::endl;
+}
+
+std::string ClapTrap::getName()
+{
+	return _Name;
 }

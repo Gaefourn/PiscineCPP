@@ -7,12 +7,50 @@ int main()
 {
 	srand(time(0));
 	FragTrap Orga("O R G A 6 9");
-	SuperTrap Super("John");
+	FragTrap Lookr("Kralookix");
+	ScavTrap Sweet("Sweetness");
+	NinjaTrap NINJA("Naruto");
 	
-	Super.rangedAttack(" O R G A 6 9");
-	Super.meleeAttack(" O R G A 6 9");
-	Super.ninjaShoebox(Orga);
-	Super.vaulthunter_dot_exe("O R G A 6 9");
+	Orga.rangedAttack("Kralookix");
+	Lookr.takeDamage(20);
+	Lookr.rangedAttack("O R G A 69");
+	Orga.takeDamage(20);
+	Lookr.meleeAttack("O R G A 69");
+	Orga.takeDamage(30);
+	Orga.vaulthunter_dot_exe("Kralookix");
+	Orga.vaulthunter_dot_exe("Kralookix");
+	Orga.vaulthunter_dot_exe("Kralookix");
+	Orga.vaulthunter_dot_exe("Kralookix");
+	Orga.vaulthunter_dot_exe("Kralookix");
+	Orga.vaulthunter_dot_exe("Kralookix");
+	Lookr.takeDamage(80);
+	Lookr.beRepaired(50);
+	Sweet.rangedAttack("O R G A 6 9");
+	Orga.takeDamage(15);
+	Sweet.meleeAttack("Kralookix");
+	Lookr.takeDamage(20);
+	Orga.meleeAttack("Swetness");
+	Sweet.takeDamage(30);
+	Sweet.beRepaired(100);
+	Sweet.challengeNewcomer();
+	Sweet.challengeNewcomer();
+	Sweet.challengeNewcomer();
+	Sweet.challengeNewcomer();
+	NINJA.ninjaShoebox(Sweet);
+	NINJA.ninjaShoebox(Orga);
+	NINJA.ninjaShoebox(NINJA);
+	
+	NinjaTrap copy = NINJA;
+	NinjaTrap copy2(copy);
+	SuperTrap super("SUPERTRAP");
+	
+	std::cout << "Operator = name : " << copy.getName() << std::endl;
+	std::cout << "Copy constructor name: " << copy2.getName() << std::endl;
+	
+	super.meleeAttack("O R G A 6 9");
+	super.rangedAttack("Sweetness");
+	super.vaulthunter_dot_exe("Kralookix");
+	super.ninjaShoebox(NINJA);
 	
 	return (0);
 }
