@@ -12,7 +12,7 @@ public:
 	
 	void takeDamage(int amount);
 	
-	~SuperMutant();
+	virtual ~SuperMutant();
 };
 
 #endif

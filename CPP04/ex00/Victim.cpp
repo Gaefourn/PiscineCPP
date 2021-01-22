@@ -36,6 +36,6 @@ Victim::~Victim()
 
 std::ostream &operator << (std::ostream &stream, Victim const &out)
 {
-	stream << "I'm " << out.getName() << " and I like otters!";
+	stream << "I'm " << out.getName() << " and I like otters!" << std::endl;
 	return (stream);
 	}
