@@ -54,6 +54,10 @@ int main()
 		moi->recoverAP();
 		moi->recoverAP();
 		moi->attack(sm);
+		sm->getHP();
+		moi->attack(sm);
+		sm->getHP();
+		
 
 		delete sm;
 		delete moi;

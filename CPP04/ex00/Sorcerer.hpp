@@ -10,6 +10,7 @@ class Sorcerer
 {
 private:
 	std::string _name, _title;
+	Sorcerer();
 public:
 	Sorcerer(std::string name, std::string title);
 	Sorcerer(const Sorcerer &copie);

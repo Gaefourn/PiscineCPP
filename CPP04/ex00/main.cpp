@@ -1,6 +1,7 @@
 #include "Sorcerer.hpp"
 #include "Peon.hpp"
 #include "Victim.hpp"
+#include "dog.hpp"
 
 int main(void)
 {
@@ -14,10 +15,12 @@ int main(void)
 		Peon sweet("Sweet");
 		Peon sweetCopy = sweet;
 		Victim orgaCopy(orga);
+		dog chien("Dog");
 		
 		clev.polymorph(orga);
 		clev.polymorph(sweet);
 		clev.polymorph(sweetCopy);
+		clev.polymorph(chien);
 		
 		std::cout << orga << std::endl;
 	}

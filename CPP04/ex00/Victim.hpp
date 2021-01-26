@@ -9,6 +9,7 @@ class Victim
 {
 protected:
 	std::string _name;
+	Victim();
 public:
 	Victim(std::string name);
 	Victim(const Victim &copy);

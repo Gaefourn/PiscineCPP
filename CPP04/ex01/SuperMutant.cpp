@@ -17,12 +17,14 @@ SuperMutant &SuperMutant::operator=(const SuperMutant &copy)
 
 void SuperMutant::takeDamage(int amount)
 {
-	int newamount;
+/*	int newamount;
 	
 	newamount = ((amount - 3) < 0 ? 0 : (amount - 3));
 	_hp -= newamount;
 	_hp = (_hp < 0 ? 0 : _hp);
 	std::cout << _type << " took some damages and has now " << _hp << " HPs." << std::endl;
+*/
+	Enemy::takeDamage(amount - 3);
 }
 
 SuperMutant::~SuperMutant()

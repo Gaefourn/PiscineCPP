@@ -10,7 +10,6 @@ protected:
 	std::string _name;
 	int _damage;
 	int _apcost;
-	
 public:
 
 	AWeapon(std::string const &name, int apcost, int damage);
