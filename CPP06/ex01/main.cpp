@@ -13,8 +13,8 @@ void *serialize(void)
 		addr[i] = c;
 	}
 	int n = std::rand() % 2147483647;
-	*reinterpret_cast <int *>(addr + 8) = n;
-	for (int i = 0; i < 8; i++)
+	addr[8] = n;
+	for (int i = 9; i <= 16; i++)
 	{
 		c = rand[std::rand() % 62];
 		addr[i] = c;
@@ -28,9 +28,11 @@ Data * deserialize(void * raw)
 	Data *data = new Data;
 	char *addr = reinterpret_cast<char*>(raw);
 	
-	data->s1 = std::string (addr, 8);
+	for (int i = 0; i < 8; i++)
+		data->s1 += addr[i];
 	data->n = *reinterpret_cast<int*>(addr + 8);
-	data->s2 = std::string (addr + 8 + sizeof(int), 8);
+	for (int i = 9; i <= 16; i++)
+		data->s2 += addr[i];
 
 	return data;
 }

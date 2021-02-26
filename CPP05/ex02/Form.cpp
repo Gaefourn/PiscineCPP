@@ -79,6 +79,8 @@ void Form::execute(Bureaucrat const &executor) const
 		throw FormUnsigned();
 	if (executor.getGrade() > _exe)
 		throw GradeTooLowException();
+
+	std::cout <<executor.getName() << " executs " << _name << std::endl;
 }
 
 bool Form::getSign() const

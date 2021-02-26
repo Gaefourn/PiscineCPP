@@ -92,6 +92,4 @@ void Bureaucrat::execForm(Form &form)
 	{
 		std::cerr << _name << " tried to execute " << form.getName() << " but couldnt because " << e.what() << '\n';
 	}
-	if (_grade <= form.getGradeExe() && form.getSign() == true)
-		std::cout << _name << " executs " << form.getName() << std::endl;
 }

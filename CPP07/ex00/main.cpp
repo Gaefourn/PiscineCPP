@@ -1,29 +1,4 @@
-#include <iostream>
-
-template < typename T >
-
-T max(T const & x, T const & y)
-{
-	return (x > y ? x : y);
-}
-
-template < typename T >
-
-T min(T const & x, T const & y)
-{
-	return (x < y ? x : y);
-}
-
-template < typename T >
-
-void swap (T & x, T & y)
-{
-	T tmp;
-	
-	tmp = x;
-	x = y;
-	y = tmp;
-}
+#include "whatever.hpp"
 
 int	main()
 {
@@ -65,6 +40,16 @@ int	main()
 		swap(str1, str2);
 		std::cout << "\nAfter swap\n";
 		std::cout << "string 1 is " << str1 << " and string2 is " << str2 << std::endl;
+	}
+	
+	{
+		 A e(42);
+ 		 A f(21);
+		  ::swap(e, f);
+ 		 std::cout << "e = " << e.getN() << ", f = " << f.getN() << std::endl;
+ 		 std::cout << "min(e, f) = " << ::min(e, f).getN() << std::endl;
+ 		 std::cout << "max(e, f) = " << ::max(e, f).getN() << std::endl;
+
 	}
 			
 	return 0;

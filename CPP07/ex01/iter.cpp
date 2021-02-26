@@ -23,11 +23,11 @@ int main()
 	
 	iter<char>(string, 7, funct);
 	
-	std::cout << "\n" << std::endl;
+	std::cout <<  std::endl;
 	
 	iter<int>(tab, 4, funct);
 	
-	std::cout << "\n" << std::endl;
+	std::cout << std::endl;
 	
 	return 0;
 }

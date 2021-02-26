@@ -2,7 +2,7 @@
 NAME     := whatever
 
 # Sources and objects.
-SRCS     := whatever.cpp
+SRCS     := main.cpp
 OBJS     := $(SRCS:.cpp=.o)
 
 # Define all the compiling flags.

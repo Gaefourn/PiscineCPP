@@ -20,7 +20,7 @@ void printint(std::string str)
 	std::cout << "int: " << static_cast<int> (i) << std::endl;
 }
 
-void prinfloat(std::string str)
+void printfloat(std::string str)
 {
 	std::size_t lastChar;
 	float f = std::stof(str, &lastChar);
@@ -67,7 +67,7 @@ int main(int ac, char **av)
 	}
 	try
 	{
-		prinfloat(av[1]);
+		printfloat(av[1]);
 	}
 	catch(const std::exception& e)
 	{
